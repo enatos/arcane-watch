@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arcane Watch</title>
+  <link rel="stylesheet" href="shared.css">
+</head>
+<body data-theme="dark">
+  <div class="container">
+    <header>
+      <div class="title-group">
+        <h1>Arcane Watch <span aria-hidden="true">📡</span></h1>
+        <p>ハーネス / クローズド4のメモリ / 仕事特化モデル　週次1枚</p>
+      </div>
+      <div class="header-actions">
+        <a class="btn" href="weekly.json">JSON</a>
+        <a class="btn" href="daily.html">日次へ</a>
+        <button class="btn" id="themeToggle" type="button">表示切替</button>
+      </div>
+    </header>
+
+    <div id="root">読み込み中…</div>
+    <footer>データ正本: weekly.json　モック（Issue #95 / Quest #106）</footer>
+  </div>
+
+  <script>
+    const themeToggle = document.getElementById('themeToggle');
+    themeToggle.addEventListener('click', () => {
+      const cur = document.body.getAttribute('data-theme') || 'dark';
+      const next = cur === 'dark' ? 'light' : 'dark';
+      document.body.setAttribute('data-theme', next);
+      localStorage.setItem('watch_theme', next);
+    });
+    const saved = localStorage.getItem('watch_theme');
+    if (saved) document.body.setAttribute('data-theme', saved);
+
+    const esc = (s) => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+    fetch('weekly.json').then(r => r.json()).then(data => {
+      const lanes = data.lanes || [];
+      const moved = lanes.filter(l => l.has_movement).length;
+      const start = data.period && data.period.start ? String(data.period.start) : '';
+      const end = data.period && data.period.end ? String(data.period.end) : '';
+      const tz = data.period && data.period.timezone ? String(data.period.timezone) : '';
+      const period = start
+        ? `${start.slice(0,10)} 〜 ${end.slice(0,10)} ${tz}`
+        : '—';
+      const generated = data.generated_at ? String(data.generated_at).slice(0,16).replace('T',' ') : '—';
+      const cls = { harness: 'l1', memory: 'l2', specialized: 'l3' };
+
+      const map = lanes.map(l => `
+        <div class="lane-card ${cls[l.id] || ''}">
+          <span class="status ${l.has_movement ? 'on' : 'off'}">${l.has_movement ? '動きあり' : '動きなし'}</span>
+          <h2>${esc(l.name)}</h2>
+          <p>${esc(l.summary)}</p>
+        </div>
+      `).join('');
+
+      const sections = lanes.map(l => `
+        <section class="lane-section ${cls[l.id] || ''}">
+          <h2 class="section-title"><span class="dot"></span>${esc(l.name)}</h2>
+          <div class="block"><h4>今週の動き</h4><p>${esc(l.this_week)}</p></div>
+          <div class="block"><h4>背景</h4><p>${esc(l.background)}</p></div>
+          <div class="block"><h4>何が変わったか</h4><p>${esc(l.changed)}</p></div>
+          <div class="block"><h4>対立する見方</h4><p>${esc(l.views)}</p></div>
+          <div class="block"><h4>えり視点の意味</h4><p>${esc(l.eri)}</p></div>
+          <div class="block"><h4>次に見るもの</h4><p>${esc(l.next)}</p></div>
+        </section>
+      `).join('');
+
+      const memo = data.cross_memo
+        ? `<h2 class="section-title">横断メモ</h2><div class="block"><p>${esc(data.cross_memo)}</p></div>`
+        : '';
+
+      document.getElementById('root').innerHTML = `
+        <section class="stats">
+          <div class="stat"><div class="label">動きあり</div><div class="value pos">${moved}</div><div class="hint">/ 3レーン</div></div>
+          <div class="stat"><div class="label">動きなし</div><div class="value">${3 - moved}</div><div class="hint">空欄にしない</div></div>
+          <div class="stat"><div class="label">対象週</div><div class="value" style="font-size:15px">${esc(start ? start.slice(0,10) : '—')}</div><div class="hint">${esc(end ? end.slice(0,10) : '—')}</div></div>
+          <div class="stat"><div class="label">タイムゾーン</div><div class="value" style="font-size:15px">${esc(tz || '—')}</div><div class="hint">生成 ${esc(generated)}</div></div>
+        </section>
+        <p class="meta" style="margin-bottom:18px">対象週　${esc(period)}</p>
+        <h2 class="section-title">レーン俯瞰</h2>
+        <div class="lane-map">${map}</div>
+        ${sections}
+        ${memo}
+      `;
+    }).catch(err => {
+      document.getElementById('root').innerHTML = `<div class="empty">調査失敗　${esc(err.message)}</div>`;
+    });
+  </script>
+</body>
+</html>
