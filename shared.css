@@ -1,0 +1,291 @@
+:root {
+  --bg: #0d1117;
+  --card-bg: #161b22;
+  --card-border: #30363d;
+  --text: #c9d1d9;
+  --text-muted: #8b949e;
+  --text-bright: #f0f6fc;
+  --accent: #58a6ff;
+  --accent-glow: rgba(88, 166, 255, 0.15);
+  --pos: #3fb950;
+  --pos-bg: rgba(63, 185, 80, 0.15);
+  --warn: #d29922;
+  --warn-bg: rgba(210, 153, 34, 0.15);
+  --tag-bg: #21262d;
+  --tag-text: #79c0ff;
+  --tag-border: #388bfd33;
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --cap: #58a6ff;
+  --rel: #3fb950;
+  --paper: #a371f7;
+  --fund: #d29922;
+  --policy: #f85149;
+  --lane1: #58a6ff;
+  --lane2: #3fb950;
+  --lane3: #d29922;
+}
+
+body[data-theme="light"] {
+  --bg: #f6f8fa;
+  --card-bg: #ffffff;
+  --card-border: #d0d7de;
+  --text: #24292f;
+  --text-muted: #57606a;
+  --text-bright: #1f2328;
+  --accent: #0969da;
+  --accent-glow: rgba(9, 105, 218, 0.1);
+  --pos: #1a7f37;
+  --pos-bg: rgba(26, 127, 55, 0.12);
+  --warn: #9a6700;
+  --warn-bg: rgba(154, 103, 0, 0.12);
+  --tag-bg: #ddf4ff;
+  --tag-text: #0969da;
+  --tag-border: #54aeff66;
+  --cap: #0969da;
+  --rel: #1a7f37;
+  --paper: #8250df;
+  --fund: #9a6700;
+  --policy: #cf222e;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.55;
+  padding: 24px 16px 72px;
+}
+
+.container { max-width: 1100px; margin: 0 auto; }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.title-group h1 {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text-bright);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.title-group p {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.header-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--card-bg);
+  color: var(--text);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 13px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn:hover { border-color: var(--accent); color: var(--accent); }
+.btn.active { background: var(--accent-glow); border-color: var(--accent); color: var(--accent); }
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 28px;
+}
+@media (max-width: 800px) { .stats { grid-template-columns: 1fr 1fr; } }
+
+.stat {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 14px 16px;
+}
+.stat .label { font-size: 12px; color: var(--text-muted); }
+.stat .value {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-bright);
+  margin-top: 4px;
+  font-variant-numeric: tabular-nums;
+}
+.stat .hint { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+.stat .value.pos { color: var(--pos); }
+
+.section-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-bright);
+  margin: 8px 0 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.chips { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+.chip {
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  border: 1px solid var(--tag-border);
+  border-radius: 999px;
+  padding: 3px 10px;
+  font-size: 12px;
+}
+
+.item-list { display: flex; flex-direction: column; gap: 12px; }
+
+.item {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 16px 18px;
+  border-left: 3px solid var(--accent);
+}
+.item.type-能力拡張 { border-left-color: var(--cap); }
+.item.type-公式リリース { border-left-color: var(--rel); }
+.item.type-論文 { border-left-color: var(--paper); }
+.item.type-資金 { border-left-color: var(--fund); }
+.item.type-政策 { border-left-color: var(--policy); }
+
+.item-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+.badges { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+
+.badge {
+  font-size: 11px;
+  border-radius: 999px;
+  padding: 2px 8px;
+  border: 1px solid var(--card-border);
+  color: var(--text-muted);
+  background: var(--tag-bg);
+}
+.badge.kind-能力拡張 { color: var(--cap); border-color: color-mix(in srgb, var(--cap) 40%, transparent); }
+.badge.kind-公式リリース { color: var(--rel); border-color: color-mix(in srgb, var(--rel) 40%, transparent); }
+.badge.kind-論文 { color: var(--paper); border-color: color-mix(in srgb, var(--paper) 40%, transparent); }
+.badge.kind-資金 { color: var(--fund); border-color: color-mix(in srgb, var(--fund) 40%, transparent); }
+.badge.kind-政策 { color: var(--policy); border-color: color-mix(in srgb, var(--policy) 40%, transparent); }
+
+.item h3 {
+  font-size: 16px;
+  font-weight: 650;
+  color: var(--text-bright);
+  margin: 2px 0 8px;
+}
+
+.meta { font-size: 13px; color: var(--text-muted); margin-bottom: 8px; }
+.meaning { font-size: 14px; }
+.src {
+  margin-top: 10px;
+  font-size: 13px;
+}
+.src a { color: var(--accent); text-decoration: none; }
+.src a:hover { text-decoration: underline; }
+
+.empty {
+  background: var(--card-bg);
+  border: 1px dashed var(--card-border);
+  border-radius: 12px;
+  padding: 28px;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.lane-map {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 28px;
+}
+@media (max-width: 800px) { .lane-map { grid-template-columns: 1fr; } }
+
+.lane-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 14px 16px;
+}
+.lane-card.l1 { border-top: 3px solid var(--lane1); }
+.lane-card.l2 { border-top: 3px solid var(--lane2); }
+.lane-card.l3 { border-top: 3px solid var(--lane3); }
+.lane-card h2 { font-size: 15px; color: var(--text-bright); margin-bottom: 6px; }
+.lane-card .status {
+  display: inline-block;
+  font-size: 11px;
+  border-radius: 999px;
+  padding: 2px 8px;
+  margin-bottom: 8px;
+}
+.lane-card .status.on { background: var(--pos-bg); color: var(--pos); }
+.lane-card .status.off { background: var(--tag-bg); color: var(--text-muted); }
+.lane-card p { font-size: 13px; color: var(--text-muted); }
+
+.block {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin-bottom: 10px;
+}
+.block h4 {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin-bottom: 6px;
+}
+.block p, .block li { font-size: 14px; }
+.block ul { padding-left: 18px; }
+
+.lane-section { margin-bottom: 32px; }
+.lane-section > .section-title .dot {
+  width: 10px; height: 10px; border-radius: 50%; display: inline-block;
+}
+.lane-section.l1 .dot { background: var(--lane1); }
+.lane-section.l2 .dot { background: var(--lane2); }
+.lane-section.l3 .dot { background: var(--lane3); }
+
+.mix {
+  display: flex;
+  gap: 4px;
+  height: 8px;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-top: 10px;
+  background: var(--tag-bg);
+}
+.mix span { display: block; height: 100%; }
+.mix .c-能力拡張 { background: var(--cap); }
+.mix .c-公式リリース { background: var(--rel); }
+.mix .c-論文 { background: var(--paper); }
+.mix .c-資金 { background: var(--fund); }
+.mix .c-政策 { background: var(--policy); }
+
+footer {
+  margin-top: 40px;
+  padding-top: 16px;
+  border-top: 1px solid var(--card-border);
+  font-size: 12px;
+  color: var(--text-muted);
+}

@@ -1,0 +1,45 @@
+{
+  "title": "Arcane Watch",
+  "period": null,
+  "generated_at": null,
+  "status": "empty",
+  "cross_memo": null,
+  "lanes": [
+    {
+      "id": "harness",
+      "name": "ハーネス",
+      "has_movement": false,
+      "summary": "",
+      "this_week": "",
+      "background": "",
+      "changed": "",
+      "views": "",
+      "eri": "",
+      "next": ""
+    },
+    {
+      "id": "memory",
+      "name": "クローズド4のメモリ",
+      "has_movement": false,
+      "summary": "",
+      "this_week": "",
+      "background": "",
+      "changed": "",
+      "views": "",
+      "eri": "",
+      "next": ""
+    },
+    {
+      "id": "specialized",
+      "name": "仕事特化モデル",
+      "has_movement": false,
+      "summary": "",
+      "this_week": "",
+      "background": "",
+      "changed": "",
+      "views": "",
+      "eri": "",
+      "next": ""
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arcane Watch</title>
+  <link rel="stylesheet" href="shared.css">
+</head>
+<body data-theme="dark">
+  <div class="container">
+    <header>
+      <div class="title-group">
+        <h1>Arcane Watch <span aria-hidden="true">🔭</span></h1>
+        <p>閉じたLLMと公式ツールで、新たに可能になったことを拾う日次1枚</p>
+      </div>
+      <div class="header-actions">
+        <a class="btn" href="daily.json">JSON</a>
+        <a class="btn" href="weekly.html">週次へ</a>
+        <button class="btn" id="themeToggle" type="button">表示切替</button>
+      </div>
+    </header>
+
+    <div id="root">読み込み中…</div>
+    <footer>データ正本: daily.json　モック（Issue #95 / Quest #106）</footer>
+  </div>
+
+  <script>
+    const themeToggle = document.getElementById('themeToggle');
+    themeToggle.addEventListener('click', () => {
+      const cur = document.body.getAttribute('data-theme') || 'dark';
+      const next = cur === 'dark' ? 'light' : 'dark';
+      document.body.setAttribute('data-theme', next);
+      localStorage.setItem('watch_theme', next);
+    });
+    const saved = localStorage.getItem('watch_theme');
+    if (saved) document.body.setAttribute('data-theme', saved);
+
+    const esc = (s) => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    const stamp = (value, length) => value ? String(value).slice(0, length) : '';
+
+    fetch('daily.json').then(r => r.json()).then(data => {
+      const items = data.items || [];
+      const counts = {};
+      items.forEach(it => { counts[it.kind] = (counts[it.kind] || 0) + 1; });
+      const cap = counts['能力拡張'] || 0;
+      const rel = counts['公式リリース'] || 0;
+      const other = items.length - cap - rel;
+      const start = stamp(data.period && data.period.start, 16);
+      const end = stamp(data.period && data.period.end, 16);
+      const tz = data.period && data.period.timezone ? String(data.period.timezone) : '';
+      const period = start
+        ? `${start.replace('T',' ')} 〜 ${end.replace('T',' ')} ${tz}`
+        : '—';
+
+      const mixTotal = items.length || 1;
+      const mix = ['能力拡張','公式リリース','論文','資金','政策'].map(k => {
+        const n = counts[k] || 0;
+        return n ? `<span class="c-${k}" style="width:${(n/mixTotal)*100}%"></span>` : '';
+      }).join('');
+
+      const chips = Object.keys(counts).map(k => `<span class="chip">${esc(k)} ${counts[k]}</span>`).join('');
+
+      const list = items.length === 0
+        ? `<div class="empty">${esc(data.empty_reason || '本日の新情報なし')}</div>`
+        : items.map(it => `
+          <article class="item type-${esc(it.kind)}">
+            <div class="item-top">
+              <div class="badges">
+                <span class="badge kind-${esc(it.kind)}">${esc(it.kind)}</span>
+                <span class="badge">${esc(it.timing)}</span>
+                <span class="badge">${esc(it.announce_type)}</span>
+              </div>
+              <div class="meta">${esc(it.timing_at || '')}</div>
+            </div>
+            <h3>${esc(it.headline)}</h3>
+            <div class="meta">${esc(it.target)}　·　${esc(it.org)}</div>
+            <p class="meaning">${esc(it.what)}</p>
+            <p class="meaning" style="margin-top:6px;color:var(--text-muted)">${esc(it.meaning)}</p>
+            ${it.url ? `<div class="src"><a href="${esc(it.url)}" target="_blank" rel="noopener">${esc(it.url_label || '公式')}</a></div>` : ''}
+          </article>
+        `).join('');
+
+      document.getElementById('root').innerHTML = `
+        <section class="stats">
+          <div class="stat"><div class="label">能力拡張</div><div class="value pos">${cap}</div><div class="hint">最大5件</div></div>
+          <div class="stat"><div class="label">公式リリース</div><div class="value">${rel}</div><div class="hint">対象モデル</div></div>
+          <div class="stat"><div class="label">論文 / 資金 / 政策</div><div class="value">${other}</div><div class="hint">残り枠</div></div>
+          <div class="stat"><div class="label">対象期間</div><div class="value" style="font-size:15px">${esc(start ? start.slice(0,10) : '—')}</div><div class="hint">${esc(tz || '—')}</div></div>
+        </section>
+        <p class="meta" style="margin-bottom:18px">調査期間　${esc(period)}</p>
+        <h2 class="section-title">内訳</h2>
+        <div class="mix">${mix}</div>
+        <div class="chips" style="margin-top:12px">${chips || '<span class="chip">0件</span>'}</div>
+        <h2 class="section-title">本日の項目</h2>
+        <div class="item-list">${list}</div>
+      `;
+    }).catch(err => {
+      document.getElementById('root').innerHTML = `<div class="empty">調査失敗　${esc(err.message)}</div>`;
+    });
+  </script>
+</body>
+</html>
