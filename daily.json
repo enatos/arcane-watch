@@ -1,65 +1,12 @@
 {
   "title": "Arcane Watch",
   "period": {
-    "start": "2026-09-21T00:00",
-    "end": "2026-09-27T17:00",
+    "start": "2026-09-27T08:00",
+    "end": "2026-09-28T08:00",
     "timezone": "Asia/Tokyo"
   },
-  "generated_at": "2026-09-27T16:56:00+09:00",
-  "status": "ok",
-  "empty_reason": null,
-  "items": [
-    {
-      "kind": "能力拡張",
-      "timing": "通常営業（平日日中）",
-      "announce_type": "研究公開",
-      "timing_at": "2026-09-23",
-      "headline": "ClaudeがCRISPR似の新酵素系ARTを自律的に見つけた",
-      "target": "Claude / Claude Science / Claude Code",
-      "org": "Anthropic",
-      "what": "約950エージェントがDNAデータを探し、バクテリオファージの逆転写酵素に伴う繰り返し配列（ART）を見つけた。人間は初期プロンプと実験室作業。機能の完全解明は未だ。",
-      "meaning": "閉じたモデルを生物検索の主操作手にした公式例。仮説生成の厚みが人の審査・実験を後追する。",
-      "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
-      "url_label": "Anthropic"
-    },
-    {
-      "kind": "公式リリース",
-      "timing": "通常営業（平日日中）",
-      "announce_type": "定例リリース",
-      "timing_at": "2026-09-22",
-      "headline": "Claude Opus 5.5。Fable 5.1級を40%安く",
-      "target": "Claude Opus 5.5 / Claude Code / API",
-      "org": "Anthropic",
-      "what": "Opus 5.5がPro/Max/Team/EnterpriseとAPI、AWS/GCP/Foundryで利用可。入力$4/出力$20、キャッシュ読み$0.20。Fast modeはClaude CodeとPlatformで最大2.5倍速。",
-      "meaning": "くろさん側の長走行エージェントを、価格を下げて回せる段に入った。",
-      "url": "https://www.anthropic.com/news",
-      "url_label": "Anthropic Newsroom"
-    },
-    {
-      "kind": "公式リリース",
-      "timing": "通常営業（平日日中）",
-      "announce_type": "定例リリース",
-      "timing_at": "2026-09-22",
-      "headline": "GPT-6 SolとLunaがAPIとChatGPT Workに入った",
-      "target": "GPT-6 Sol / GPT-6 Luna / Codex / ChatGPT Work",
-      "org": "OpenAI",
-      "what": "Astra系の中価・低価ティア。Solは入力$2/出力$10、Lunaは$0.10/$0.50。Plus以上のWorkとCodex、API。LunaはFree/Goのデスクトップで試せる。",
-      "meaning": "なびさん側の毎日作業をAstra以外で回せるようになった。価格変更だけではない。",
-      "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
-      "url_label": "OpenAI"
-    },
-    {
-      "kind": "公式リリース",
-      "timing": "通常営業（平日日中）",
-      "announce_type": "定例リリース",
-      "timing_at": "2026-09-21",
-      "headline": "Grok 4.7がAPIとCursor / Grok Buildに出た",
-      "target": "Grok 4.7 / Grok Build / Cursor",
-      "org": "xAI",
-      "what": "コーディングと知識作業向け。コンテキスト50万、入力$2/出力$6。Responses APIで暗号化reasoningを常時返す。Fast変種はCursorとGrok Buildのみ。",
-      "meaning": "じょじょ側の公式フラッグシップが4.6同価で置き換わった。統合側のキー名とreasoning指定を見直す必要がある。",
-      "url": "https://x.ai/news/grok-4-7",
-      "url_label": "xAI"
-    }
-  ]
+  "generated_at": "2026-09-28T08:00:00+09:00",
+  "status": "empty",
+  "empty_reason": "本日の新情報なし",
+  "items": []
 }
