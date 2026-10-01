@@ -1,51 +1,51 @@
 {
   "title": "Arcane Watch",
   "period": {
-    "start": "2026-09-30T06:00",
-    "end": "2026-10-01T06:00",
+    "start": "2026-10-01T06:00",
+    "end": "2026-10-02T06:00",
     "timezone": "Asia/Tokyo"
   },
-  "generated_at": "2026-10-01T06:00:00+09:00",
+  "generated_at": "2026-10-02T06:00:00+09:00",
   "status": "ok",
   "items": [
     {
       "kind": "能力拡張",
-      "timing": "通常営業（平日日中）",
+      "timing": "未確認",
       "announce_type": "定例リリース",
-      "timing_at": "2026-09-30",
-      "headline": "GeminiのSkillsがチャットに入り、指示を保存して再実行できる",
-      "target": "ジェミさん",
-      "org": "Google",
-      "what": "繰り返す指示をSkillsとして保存し、プロンプト欄で / 名前を打って再実行できる。今日からGeminiチャットへ世界向けに順次公開。参照ファイル（テキスト・PDF・画像）をSkillsに付けられる。複数Skillsの並用も可。Gemini Sparkでは既に利用可。Gemsの共有やDrive連携は今後数週。Workspace向けも今後数週。Gemsは個人帳度が11月から終了予定でSkillsへ移行する。",
-      "meaning": "毎回同じ依頼文を書く代わり、指示を名前付けて呼ぶ仕方がGemini本体の公式箇条になった。",
-      "url": "https://blog.google/products-and-platforms/products/gemini/automate-tasks-with-skills/",
-      "url_label": "Google"
+      "timing_at": "2026-10-01",
+      "headline": "ChatGPTの商品一覧で服を試着し、お気に入りを残せる",
+      "target": "なびさん",
+      "org": "OpenAI",
+      "what": "服とアクセサリーの商品一覧にTry onが出る。自撮りを撮るか上げると、ChatGPT Imagesで仮想試着を作る。参照写真は次回以降のために保存され、Settings → Personalization → Reference photosで変更・削除できる。商品はFavoritesかフォルダに残せる。モバイルとWebのChatGPTで使える。",
+      "meaning": "商品を探すだけでなく、自分の見た目に重ねて残すところまで、ChatGPTの買い物の中で公式にできるようになった。",
+      "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+      "url_label": "OpenAI"
     },
     {
-      "kind": "公式リリース",
-      "timing": "通常営業（平日日中）",
+      "kind": "能力拡張",
+      "timing": "未確認",
       "announce_type": "定例リリース",
-      "timing_at": "2026-09-30",
-      "headline": "Gemini 4 Argonが公表された。一般利用はまだない",
-      "target": "ジェミさん",
-      "org": "Google",
-      "what": "長期間の実務・法務・金融・サイバー防衛向けの次期フロンティアモデル。今日の公開先はFairwind Programの信頼されたサイバー防衛者。米国政府の事前公開アクセス自主プロセスに参加しつつ、開発者・企業・消費者へは後日拡大と公式が言う。出力上限は1Mトークン。導入価格は入力$2/出力$10（百万トークン、USD）。",
-      "meaning": "次期Geminiの実体は出たが、今の使い手は防衛用の限定公開に止まる。通常の会話やAPIではまだ使えない。",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
-      "url_label": "Google"
+      "timing_at": "2026-10-01",
+      "headline": "Safewayの買い物がChatGPT内でカートまで進む",
+      "target": "なびさん",
+      "org": "OpenAI",
+      "what": "公式がSafeway体験をChatGPTに出した。レシピ、写真、買い物リスト、短い依頼から始められる。例は「4人のピザ夜」「デリカで手早い夕食」「ストアブランドで朝食とおやつを補充」。関連商品と割引を出し、カートを組み、会計はSafewayへ渡す。",
+      "meaning": "献立の相談で終わらず、店の商品とカートまでをChatGPTの中でつなぐ使い方が公式に出た。",
+      "url": "https://openai.com/index/albertsons-reimagining-retail/",
+      "url_label": "OpenAI"
     },
     {
-      "kind": "論文",
-      "timing": "通常営業（平日日中）",
-      "announce_type": "研究公開",
-      "timing_at": "2026-09-30",
-      "headline": "AIが設計したタンパク質に透かし印を入れる手法が出た",
+      "kind": "能力拡張",
+      "timing": "未確認",
+      "announce_type": "定例リリース",
+      "timing_at": "2026-10-01",
+      "headline": "Gemini LiveのGuided VisionがAndroidでカメラ案内を始めた",
       "target": "ジェミさん",
-      "org": "Google DeepMind",
-      "what": "SynthID Bio。タンパク質配列や構造に検出可能な置名を埋め、合成した実物タンパク質でも機能を残して検証できると公式が報告する。VEGF-Aなど三種で湿式試験し、未置名と同程度の結合を確認。方法論文をNatureに出し、コード・試験データ・重みを研究向けに公開。製品ではなく証明段階。",
-      "meaning": "生成した設計がAI由来かを、デジタルだけでなく実物タンパク質でも見分ける手法が公式ラボから出た。",
-      "url": "https://deepmind.google/blog/introducing-synthid-bio/",
-      "url_label": "Google DeepMind"
+      "org": "Google",
+      "what": "対応AndroidのGemini Liveで、カメラを共有すると周囲の音声説明と、画角を直す口頭の案内が返る。高すぎ・近すぎ・ずれを、右へゆっくり、下へ、一歩下がって、と会話で直す。視覚障害・低視力向けに作り、文字が小さい・暗い場面でも使える。TalkBack連携とAccessibility Shortcutsあり。今日から起動。",
+      "meaning": "写真を一度上げて説明させるのではなく、カメラを向けたまま会話で視界を合わせる使い方がGemini Liveの公式機能になった。",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/guided-vision-gemini-live/",
+      "url_label": "Google"
     }
   ]
 }
