@@ -1,25 +1,12 @@
 {
   "title": "Arcane Watch",
   "period": {
-    "start": "2026-10-02T06:00",
-    "end": "2026-10-03T06:00",
+    "start": "2026-10-03T06:00",
+    "end": "2026-10-04T06:00",
     "timezone": "Asia/Tokyo"
   },
-  "generated_at": "2026-10-03T06:00:00+09:00",
-  "status": "ok",
-  "items": [
-    {
-      "kind": "能力拡張",
-      "timing": "未確認",
-      "announce_type": "定例リリース",
-      "timing_at": "2026-10-02",
-      "headline": "ChatGPTのFinancesがFreeとGoでも口座を読める",
-      "target": "なびさん",
-      "org": "OpenAI",
-      "what": "米国のFreeとGoに、ChatGPTのFinancesが展開中。Web、iOS、Android。金融口座を接続し、節約の余地、支出の内訳、投資の把握を、自分の数字に接地した答えで聞ける。",
-      "meaning": "有料プランだけだった家計の接続が、FreeとGoでも公式に開いた。相談だけでなく、自分の口座を読ませて聞く使い方がその層に届いた。",
-      "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
-      "url_label": "OpenAI"
-    }
-  ]
+  "generated_at": "2026-10-04T06:00:00+09:00",
+  "status": "empty",
+  "empty_reason": "本日の新情報なし",
+  "items": []
 }
