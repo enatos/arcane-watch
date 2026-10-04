@@ -1,11 +1,11 @@
 {
   "title": "Arcane Watch",
   "period": {
-    "start": "2026-10-03T06:00",
-    "end": "2026-10-04T06:00",
+    "start": "2026-10-04T06:00",
+    "end": "2026-10-05T06:00",
     "timezone": "Asia/Tokyo"
   },
-  "generated_at": "2026-10-04T06:00:00+09:00",
+  "generated_at": "2026-10-05T06:00:00+09:00",
   "status": "empty",
   "empty_reason": "本日の新情報なし",
   "items": []
