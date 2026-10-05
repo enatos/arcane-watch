@@ -1,12 +1,25 @@
 {
   "title": "Arcane Watch",
   "period": {
-    "start": "2026-10-04T06:00",
-    "end": "2026-10-05T06:00",
+    "start": "2026-10-05T06:00",
+    "end": "2026-10-06T06:00",
     "timezone": "Asia/Tokyo"
   },
-  "generated_at": "2026-10-05T06:00:00+09:00",
-  "status": "empty",
-  "empty_reason": "本日の新情報なし",
-  "items": []
+  "generated_at": "2026-10-06T06:00:00+09:00",
+  "status": "ok",
+  "items": [
+    {
+      "kind": "能力拡張",
+      "timing": "未確認",
+      "announce_type": "その他",
+      "timing_at": "2026-10-05",
+      "headline": "APIでtextGrainのテキスト透かしをオプトインできるようになった",
+      "target": "なびさん（ChatGPT / OpenAI）",
+      "org": "OpenAI",
+      "what": "2026-10-05、OpenAIはAPI利用者向けに、選択モデルのテキスト出力へ不可視の統計的透かしtextGrainを付けられるオプトインを開始した。既定はオフ。検出器の利用申請も、承認された研究者と専門機関向けに受け付け始めた。ChatGPTとCodexのEU向け適用は今後数週間の予告で、今回の実装対象には入れてない。",
+      "meaning": "API出力に出自シグナルを載せ、検出器でOpenAIの透かし有無を見られるようになった。透かしは文言選択の統計信号で、隠字や不可視スペースは足さない。短い文や数式では検出が落ちる、と公式は書いてる。",
+      "url": "https://openai.com/index/eu-text-provenance/",
+      "url_label": "公式"
+    }
+  ]
 }
