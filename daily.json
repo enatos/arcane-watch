@@ -1,50 +1,50 @@
 {
   "title": "Arcane Watch",
   "period": {
-    "start": "2026-10-06T06:00",
-    "end": "2026-10-07T06:00",
+    "start": "2026-10-07T06:00",
+    "end": "2026-10-08T06:00",
     "timezone": "Asia/Tokyo"
   },
-  "generated_at": "2026-10-07T06:00:00+09:00",
+  "generated_at": "2026-10-08T06:00:00+09:00",
   "status": "ok",
   "items": [
     {
       "kind": "能力拡張",
       "timing": "未確認",
       "announce_type": "定例リリース",
-      "timing_at": "2026-10-06",
-      "headline": "APIでテキストと画像を型付き判定にできるようになった",
+      "timing_at": "2026-10-07",
+      "headline": "ChatGPTが、会話の中で使える画面をその場で出せるようになった",
       "target": "なびさん（ChatGPT / OpenAI）",
       "org": "OpenAI",
-      "what": "2026-10-06、OpenAIはDecisions APIを公開ベータで出した。使えるモデルはgpt-6-lunaのみ。テキストと画像を、条件の確率、固定候補からの選択、ルーブリック上のスコアといった型付きの答えに返す。公式はResponses APIより約10倍速いと書いている。分類、振り分け、優先度付け向けで、自分のJSONスキーマで物体を生成する用途はResponses API側のまま。",
-      "meaning": "生成ではなく判定を専用エンドポイントに分けた。アプリが真偽の確率や択一、採点を、長い生成を待たずに受け取れる。GAは今後数週間の予告なので、今使えるのはベータ。",
-      "url": "https://developers.openai.com/api/docs/guides/decisions",
-      "url_label": "公式"
-    },
-    {
-      "kind": "能力拡張",
-      "timing": "未確認",
-      "announce_type": "定例リリース",
-      "timing_at": "2026-10-06",
-      "headline": "セキュリティ担当が、抑制を下げたClaudeを段階申請できるようになった",
-      "target": "くろさん（Claude / Anthropic）",
-      "org": "Anthropic",
-      "what": "2026-10-06、AnthropicはCyber Verification Programを3段階に広げた。Defenseは防御作業、Red Teamは許可された侵入テスト、Specializedは人命や市場に関わる安全系の検証向け。対象モデルはClaude Opus 5.5、Sonnet 5.5、Mythos 5.1、Fable 5.1と、以降の新モデル。申請は今から。",
-      "meaning": "一般提供のままでは止まるサイバー作業を、資格を通した層だけ抑制分類器を下げて使えるようになった。物理的被害や大規模混乱を起こす操作は、上位でもリアルタイムで止めると公式は書いている。個人はRed Team以上に入れない。",
-      "url": "https://www.anthropic.com/news/cyber-verification-program",
+      "what": "2026-10-07、OpenAIはChatGPTのChatタブにGPT-6とIntelligent UIを出し始めた。回答は文章だけでなく、比較、図、ボタン、フォーム、グラフ、計算機や割り勘、ゲームのようなその場の道具を混ぜられる。形式は質問に合わせて選び、文章だけで足りるときは文章のまま。考えている途中やツール使用の途中から答えを出し、続きを同じ回答に足せる。有料枠はGPT-6 Sol、FreeとGoは翌日からGPT-6 Luna。Intelligent UIはInstantからExtra Highまで。Proの推論はGPT-6 Astraのままで、Intelligent UIは付かない。WorkとCodexのモデルは今回変わらない。",
+      "meaning": "待つだけだった推論回答が、読みながら使える画面になった。会話の中で比較や計算を済ませられる。公開はロールアウト中で、Enterpriseは管理者設定次第。",
+      "url": "https://openai.com/index/gpt-6-for-everyone/",
       "url_label": "公式"
     },
     {
       "kind": "公式リリース",
       "timing": "未確認",
       "announce_type": "定例リリース",
-      "timing_at": "2026-10-06",
-      "headline": "画像生成のNano Banana 2.1が一般提供になった",
+      "timing_at": "2026-10-07",
+      "headline": "小さいClaudeに、努力度の調整が付いた",
+      "target": "くろさん（Claude / Anthropic）",
+      "org": "Anthropic",
+      "what": "2026-10-07、AnthropicはClaude Haiku 5.5を出した。公式は、これまでのHaikuで最も安く速く、能力も高い小モデルだと書いている。用途は要約、圧縮、データベース問い合わせ、分類のような大量で単価を見る作業。コーディングではOpus 5.5やSonnet 5.5のサブエージェントとしても組む。Haiku級で初めて努力度を調整できる。APIとClaude.aiで使え、MaxとTeamには月次APIクレジットが付く、と公式ページにある。",
+      "meaning": "高いモデルに任せていた大量処理を、努力度を下げた小さいモデルへ分けられる。新しい種類の作業というより、小モデル側で回せる量と役割が増えた。",
+      "url": "https://www.anthropic.com/claude-haiku-5-5",
+      "url_label": "公式"
+    },
+    {
+      "kind": "能力拡張",
+      "timing": "未確認",
+      "announce_type": "定例リリース",
+      "timing_at": "2026-10-07",
+      "headline": "誰でも、画像・動画・音声にAIの透かしがあるか見られるようになった",
       "target": "ジェミさん（Gemini / Google）",
-      "org": "Google",
-      "what": "2026-10-06、Gemini APIでgemini-nano-banana-2.1が一般提供になった。会話での編集、複数ターンでの人物の一貫性、文字描画、1:4・4:1・1:8・8:1の横長と縦長、1K・2K・4K。前のgemini-3.1-flash-imageは2026-10-29に停止予定。",
-      "meaning": "パノラマ比率と、ターンをまたいだ人物の維持が公式の画像生成で使える。速度と単価はFlash級のまま、と公式は書いている。",
-      "url": "https://ai.google.dev/gemini-api/docs/changelog",
+      "org": "Google DeepMind",
+      "what": "2026-10-07、Google DeepMindはSynthID Detectorの対象を、メディア関係者向けの初期版から一般へ広げた。英語で、世界向けに当日から使える。画像、動画、音声について、Google製か、OpenAI、NVIDIA、Kakaoの透かしがあるかを確認できる。Appleは近日、と公式は書いている。",
+      "meaning": "モデルの新しい回答能力ではない。生成物かどうかを、専門職以外がその場で確かめられる公式の確認口が増えた。",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/synth-id-ai-content/",
       "url_label": "公式"
     }
   ]
