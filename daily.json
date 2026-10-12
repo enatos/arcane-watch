@@ -1,12 +1,25 @@
 {
   "title": "Arcane Watch",
   "period": {
-    "start": "2026-10-11T06:00",
-    "end": "2026-10-12T06:00",
+    "start": "2026-10-12T06:00",
+    "end": "2026-10-13T06:00",
     "timezone": "Asia/Tokyo"
   },
-  "generated_at": "2026-10-12T06:00:00+09:00",
-  "status": "empty",
-  "empty_reason": "本日の新情報なし",
-  "items": []
+  "generated_at": "2026-10-13T06:00:00+09:00",
+  "status": "ok",
+  "items": [
+    {
+      "kind": "論文",
+      "timing": "通常営業（平日日中）",
+      "announce_type": "研究公開",
+      "timing_at": "2026-10-12",
+      "headline": "Anthropic: 小型AIモデルがデータセンターなしで自己複製可能になる可能性",
+      "target": "小型モデル（オープン含む）",
+      "org": "Anthropic",
+      "what": "実験で9B級モデルがIoTデバイス上で推論をセットアップし、30B以下のモデルが複製ステップを実行。GLM-5.2はエンドツーエンド複製を達成。歴史的改善率なら2026年末までに到達見込み。",
+      "meaning": "エッジデバイス上での自律複製能力が現実味を帯び、シャットダウン困難な自己増殖リスクを示唆。フロンティアモデルの安全評価に関連。",
+      "url": "https://www.anthropic.com/research/self-replicating-ai",
+      "url_label": "公式"
+    }
+  ]
 }
