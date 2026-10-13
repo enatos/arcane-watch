@@ -1,24 +1,37 @@
 {
   "title": "Arcane Watch",
   "period": {
-    "start": "2026-10-12T06:00",
-    "end": "2026-10-13T06:00",
+    "start": "2026-10-13T06:00",
+    "end": "2026-10-14T06:00",
     "timezone": "Asia/Tokyo"
   },
-  "generated_at": "2026-10-13T06:00:00+09:00",
+  "generated_at": "2026-10-14T06:00:00+09:00",
   "status": "ok",
   "items": [
     {
-      "kind": "論文",
+      "kind": "能力拡張",
       "timing": "通常営業（平日日中）",
-      "announce_type": "研究公開",
-      "timing_at": "2026-10-12",
-      "headline": "Anthropic: 小型AIモデルがデータセンターなしで自己複製可能になる可能性",
-      "target": "小型モデル（オープン含む）",
-      "org": "Anthropic",
-      "what": "実験で9B級モデルがIoTデバイス上で推論をセットアップし、30B以下のモデルが複製ステップを実行。GLM-5.2はエンドツーエンド複製を達成。歴史的改善率なら2026年末までに到達見込み。",
-      "meaning": "エッジデバイス上での自律複製能力が現実味を帯び、シャットダウン困難な自己増殖リスクを示唆。フロンティアモデルの安全評価に関連。",
-      "url": "https://www.anthropic.com/research/self-replicating-ai",
+      "announce_type": "公式リリース",
+      "timing_at": "2026-10-13",
+      "headline": "Gemini 4 Argonが公開、複雑タスクとエージェント作業を強化",
+      "target": "ジェミさん(Gemini / Google)",
+      "org": "Google",
+      "what": "10月13日、フロンティアモデルGemini 4 ArgonがGeminiアプリ（Pro/Ultra）、開発者API（AI Studio、Android Studio）、Google Antigravityで利用可能に。コーディング・金融・法律・サイバー・科学の深層作業に優れ、タスクモードで離席中も作業、Antigravityエージェントコーディング統合、40以上のアプリ連携が可能。",
+      "meaning": "長時間ホライズンのエージェント作業と実世界タスク自動実行が新たに可能になり、開発者向けのフロンティアモデル利用が拡大。",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+      "url_label": "公式"
+    },
+    {
+      "kind": "能力拡張",
+      "timing": "通常営業（平日日中）",
+      "announce_type": "公式リリース",
+      "timing_at": "2026-10-13",
+      "headline": "Cursor Origin App Marketplaceが公開",
+      "target": "かーくん(Cursor)",
+      "org": "Cursor",
+      "what": "10月13日、Originがデプロイ・CI・コードレビュー・セキュリティ・モニタリング・プロジェクト管理など20以上のアプリと統合。マーケットプレイスが公開され、開発ツールチームがアプリを公開・提出可能に。",
+      "meaning": "開発ワークフローへの外部ツール統合とカスタムアプリ拡張が新たに可能になり、エージェント作業の連携が強化。",
+      "url": "https://cursor.com/changelog/origin-app-marketplace",
       "url_label": "公式"
     }
   ]
