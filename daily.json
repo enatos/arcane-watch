@@ -1,51 +1,12 @@
 {
   "title": "Arcane Watch",
   "period": {
-    "start": "2026-10-16T06:00",
-    "end": "2026-10-17T06:00",
+    "start": "2026-10-17T06:00",
+    "end": "2026-10-18T06:00",
     "timezone": "Asia/Tokyo"
   },
-  "generated_at": "2026-10-17T06:00:00+09:00",
-  "status": "ok",
-  "items": [
-    {
-      "kind": "能力拡張",
-      "timing": "通常営業（平日日中）",
-      "announce_type": "定例リリース",
-      "timing_at": "2026-10-16",
-      "headline": "ChatGPTでスライド作成・共同編集が可能に",
-      "target": "なびさん(ChatGPT / OpenAI)",
-      "org": "OpenAI",
-      "what": "10月16日、ChatGPT Slidesが登場。会話・ファイル・アウトラインや例示デッキからプレゼンを作成し、チームとリアルタイム共同編集・コメント、テキスト/画像/図形/チャートの直接編集やカスタム画像生成、直接プレゼンまたはPowerPoint/PDF/Google Slidesエクスポートが可能。Pro/Business/Enterpriseで利用。",
-      "meaning": "ChatGPT内でプレゼン作成から共同作業・発表まで完結できるようになり、ドキュメント作業の範囲が拡大。",
-      "url": "https://chatgpt.com/features/slides/",
-      "url_label": "公式"
-    },
-    {
-      "kind": "能力拡張",
-      "timing": "通常営業（平日日中）",
-      "announce_type": "定例リリース",
-      "timing_at": "2026-10-16",
-      "headline": "GPT-6 Proで複数エージェント並行処理が可能に",
-      "target": "なびさん(ChatGPT / OpenAI)",
-      "org": "OpenAI",
-      "what": "10月16日、ChatGPTのGPT-6 Proが更新。応答速度向上、プラグインとツールの利用改善、複数エージェントがタスクの異なる部分を並行処理。会話内で進捗を追跡し、完了タスクを開いて各エージェントの作業を確認可能。対象Proユーザーにロールアウト。",
-      "meaning": "複雑なタスクを複数のエージェントで並列処理できるようになり、エージェンティックな作業効率が向上。",
-      "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
-      "url_label": "公式"
-    },
-    {
-      "kind": "能力拡張",
-      "timing": "通常営業（平日日中）",
-      "announce_type": "定例リリース",
-      "timing_at": "2026-10-16",
-      "headline": "GPT-Liveでprompt-to-voiceと新音声が利用可能に",
-      "target": "なびさん(ChatGPT / OpenAI)",
-      "org": "OpenAI",
-      "what": "10月16日、APIでprompt-to-voiceが全顧客にリリース。テキスト記述からカスタム音声を作成しGPT-Liveセッションで再利用可能。作成は無料、生成は通常課金。加えてドイツ語・フランス語・ヒンディー語・日本語・韓国語の自然な新音声9種を追加。",
-      "meaning": "カスタム音声をテキストから生成して音声対話に組み込めるようになり、多言語・パーソナライズされたLive体験が拡大。",
-      "url": "https://openai.com/products/release-notes/",
-      "url_label": "公式"
-    }
-  ]
+  "generated_at": "2026-10-18T06:00:00+09:00",
+  "status": "empty",
+  "empty_reason": "本日の新情報なし",
+  "items": []
 }
