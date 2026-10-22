@@ -1,50 +1,24 @@
 {
   "title": "Arcane Watch",
   "period": {
-    "start": "2026-10-21T06:00",
-    "end": "2026-10-22T06:00",
+    "start": "2026-10-22T06:00",
+    "end": "2026-10-23T06:00",
     "timezone": "Asia/Tokyo"
   },
-  "generated_at": "2026-10-22T06:00:00+09:00",
+  "generated_at": "2026-10-23T06:00:00+09:00",
   "status": "ok",
   "items": [
     {
       "kind": "能力拡張",
       "timing": "通常営業（平日日中）",
-      "announce_type": "研究公開",
-      "timing_at": "2026-10-21",
-      "headline": "数千のAIエージェントが生物データから研究リードを抽出",
-      "target": "なびさん(ChatGPT / OpenAI)",
-      "org": "OpenAI",
-      "what": "GPT-Rosalindを使った数千のエージェントがマウス脳細胞数百万件のCRISPRアトラスを並列分析し、32分で推論アトラスを生成。",
-      "meaning": "大規模生物データの文献統合と仮説生成をエージェント分散で高速化し、新しい疾患リードを抽出する研究手法が実用可能に。",
-      "url": "https://openai.com/index/scaling-ai-research-for-complex-biological-data/",
-      "url_label": "公式"
-    },
-    {
-      "kind": "能力拡張",
-      "timing": "通常営業（平日日中）",
       "announce_type": "定例リリース",
-      "timing_at": "2026-10-21",
-      "headline": "エージェントがPHPの重大脆弱性を発見し世界応答を調整",
+      "timing_at": "2026-10-22",
+      "headline": "Decisions APIが一般公開でリアルタイム判断を高速化",
       "target": "なびさん(ChatGPT / OpenAI)",
       "org": "OpenAI",
-      "what": "GPT-5.6 Solを使ったエージェントがPHPの重大脆弱性を発見。メンテナーや保安パートナーと調整し、CodexスキルとしてPHPバージョンチェッカーを公開。",
-      "meaning": "フロンティアモデルによる脆弱性発見がインターネット規模の防衛窓を作り、オープンソースメンテナーの対応を加速する新しい運用。",
-      "url": "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities/",
-      "url_label": "公式"
-    },
-    {
-      "kind": "能力拡張",
-      "timing": "通常営業（平日日中）",
-      "announce_type": "定例リリース",
-      "timing_at": "2026-10-21",
-      "headline": "OpenAIモデルとCodexがGoogle Cloudで利用可能に",
-      "target": "なびさん(ChatGPT / OpenAI)",
-      "org": "OpenAI",
-      "what": "フロンティアモデルとCodexエージェントワークフローをGoogle Cloud Model Gardenに統合。Marketplace経由で購入可能に。",
-      "meaning": "Google Cloud環境内でデータガバナンスとインフラを活かしたエージェントワークフローが企業に開かれ、モデル選択の柔軟性が増す。",
-      "url": "https://openai.com/index/openai-models-google-cloud/",
+      "what": "GPT-6 Lunaを使ったDecisions APIが一般公開。テキスト・画像・JSON入力から定界回答（predicate/choice/score）を最大で10倍速く返し、GPT-Liveとのネイティブ統合も対応。",
+      "meaning": "アプリやエージェントのルーティング・分類・次アクション選択を低遅延・低コストで実装できるようになり、ボイス対話中の判断も可能に。",
+      "url": "https://openai.com/index/decisions-api/",
       "url_label": "公式"
     }
   ]
